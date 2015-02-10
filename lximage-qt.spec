@@ -11,7 +11,7 @@ Group:		Graphical desktop/KDE
 BuildRequires:	cmake
 BuildRequires:	qt5-devel
 BuildRequires:	qt5-linguist-tools
-BuildRequires:	pkgconfig(lxqt-qt5)
+BuildRequires:	pkgconfig(lxqt)
 BuildRequires:	pkgconfig(libfm-qt5)
 BuildRequires:	pkgconfig(Qt5Help)
 BuildRequires:	pkgconfig(Qt5PrintSupport)
