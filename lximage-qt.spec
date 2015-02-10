@@ -2,7 +2,7 @@
 
 Name:		lximage-qt
 Version:	0.3.0
-Release:	1
+Release:	2
 Source0:	http://lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
 Summary:	Image viewer and screenshot tool for the LXQt desktop
 Url:		http://lxqt.org/
