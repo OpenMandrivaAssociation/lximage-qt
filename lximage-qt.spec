@@ -9,6 +9,8 @@ Url:		http://lxqt.org/
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
+BuildRequires:	qt5-devel
+BuildRequires:	qt5-linguist-tools
 BuildRequires:	pkgconfig(lxqt-qt5)
 BuildRequires:	pkgconfig(libfm-qt5)
 BuildRequires:	pkgconfig(Qt5Help)
