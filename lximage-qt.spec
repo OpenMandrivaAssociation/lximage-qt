@@ -10,7 +10,7 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(lxqt)
-BuildRequires:	pkgconfig(libfm)
+BuildRequires:	pkgconfig(libfm-qt5)
 BuildRequires:	pkgconfig(Qt5Help)
 BuildRequires:	pkgconfig(Qt5PrintSupport)
 BuildRequires:	qt5-linguist-tools
@@ -23,10 +23,6 @@ Image viewer and screenshot tool for the LXQt desktop
 
 %prep
 %setup -q
-# (tpg) fix finding libfm
-sed -i -e "s/libfm-qt5/libfm/g" CMakeLists.txt
-sed -i -e "s/libfm-qt5/libfm/g" src/application.h
-
 %cmake -DUSE_QT5=ON
 
 %build
