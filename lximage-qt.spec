@@ -23,6 +23,9 @@ Image viewer and screenshot tool for the LXQt desktop
 
 %prep
 %setup -q
+# (tpg) fix finding libfm
+sed -i -e "s/libfm-qt5/libfm/g" CMakeLists.txt
+
 %cmake -DUSE_QT5=ON
 
 %build
