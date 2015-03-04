@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:		lximage-qt
-Version:	0.3.0
+Version:	0.4.0
 Release:	1
 Source0:	http://lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
 Summary:	Image viewer and screenshot tool for the LXQt desktop
