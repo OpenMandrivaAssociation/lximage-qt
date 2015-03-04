@@ -13,7 +13,7 @@ BuildRequires:	pkgconfig(lxqt)
 BuildRequires:	pkgconfig(libfm)
 BuildRequires:	pkgconfig(Qt5Help)
 BuildRequires:	pkgconfig(Qt5PrintSupport)
-BuildRequires:	pkgconfig(Qt5LinguistTools)
+BuildRequires:	qt5-linguist-tools
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(xfixes)
