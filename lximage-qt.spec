@@ -9,6 +9,7 @@ Url:		http://lxqt.org/
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 BuildRequires:	cmake
+BuildRequires:	qmake5
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5DBus)
 BuildRequires:	cmake(Qt5PrintSupport)
