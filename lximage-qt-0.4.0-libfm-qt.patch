@@ -1,0 +1,19 @@
+--- lximage-qt-0.4.0/CMakeLists.txt.omv~	2016-05-10 12:30:24.190128804 +0200
++++ lximage-qt-0.4.0/CMakeLists.txt	2016-05-10 12:31:50.891928205 +0200
+@@ -22,13 +22,15 @@ find_package(Qt5X11Extras REQUIRED QUIET
+ find_package(Qt5LinguistTools REQUIRED QUIET)
+ message(STATUS "Building with Qt ${Qt5Core_VERSION_STRING}")
+ 
++add_definitions(-std=gnu++14)
++
+ find_package(PkgConfig REQUIRED)
+ pkg_check_modules(GLIB REQUIRED glib-2.0)
+ 
+ # FIXME: we'll need this to provide detail info for photos in the future
+ pkg_check_modules(EXIF REQUIRED libexif)
+ 
+-pkg_check_modules(LIBFM_QT REQUIRED libfm-qt5 libfm>=1.2)
++pkg_check_modules(LIBFM_QT REQUIRED libfm-qt libfm>=1.2)
+ 
+ # TODO: make the X11 stuff optional.
+ # for screenshot support
