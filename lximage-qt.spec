@@ -22,6 +22,7 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(xfixes)
 BuildRequires:	pkgconfig(x11)
+BuildRequires:	git-core
 
 %description
 Image viewer and screenshot tool for the LXQt desktop.
