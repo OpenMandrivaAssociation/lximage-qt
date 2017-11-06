@@ -2,12 +2,12 @@
 
 Summary:	Image viewer and screenshot tool for the LXQt desktop
 Name:		lximage-qt
-Version:	0.5.1
+Version:	0.6.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org/
-Source0:	http://lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
+Source0:	https://downloads.lxqt.org/downloads/lximage-qt/%{version}/%{name}-%{version}.tar.xz
 BuildRequires:	cmake
 BuildRequires:	qmake5
 BuildRequires:	ninja
@@ -19,7 +19,7 @@ BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:	cmake(Qt5Svg)
 BuildRequires:	cmake(lxqt-build-tools)
 BuildRequires:	pkgconfig(lxqt)
-BuildRequires:	pkgconfig(libfm-qt)
+BuildRequires:	pkgconfig(libfm-qt) >= 0.12.0
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(xfixes)
