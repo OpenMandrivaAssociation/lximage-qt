@@ -13,6 +13,7 @@ BuildRequires:	qmake5
 BuildRequires:	ninja
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5DBus)
+BuildRequires:	cmake(Qt5Network)
 BuildRequires:	cmake(Qt5PrintSupport)
 BuildRequires:	cmake(Qt5X11Extras)
 BuildRequires:	cmake(Qt5LinguistTools)
