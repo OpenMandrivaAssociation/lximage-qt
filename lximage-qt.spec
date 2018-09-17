@@ -21,6 +21,7 @@ BuildRequires:	cmake(Qt5Svg)
 BuildRequires:	cmake(lxqt-build-tools)
 BuildRequires:	pkgconfig(lxqt)
 BuildRequires:	pkgconfig(libfm-qt) >= 0.12.0
+BuildRequires:	pkgconfig(libfm-extra)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(xfixes)
