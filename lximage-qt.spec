@@ -25,6 +25,7 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(xfixes)
 BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(libmenu-cache)
 
 %description
 Image viewer and screenshot tool for the LXQt desktop.
