@@ -57,4 +57,3 @@ export LC_ALL=en_US.utf-8
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/applications/%{name}-screenshot.desktop
 %{_iconsdir}/hicolor/48x48/apps/%{name}.png
-%{_datadir}/%{name}/translations/%{name}*.qm
