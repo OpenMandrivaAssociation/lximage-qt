@@ -25,7 +25,6 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(xfixes)
 BuildRequires:	pkgconfig(x11)
-BuildRequires:	git-core
 
 %description
 Image viewer and screenshot tool for the LXQt desktop.
@@ -33,7 +32,7 @@ Image viewer and screenshot tool for the LXQt desktop.
 %prep
 %setup -q
 %apply_patches
-%cmake_qt5 -G Ninja
+%cmake_qt5 -DPULL_TRANSLATIONS=NO -G Ninja
 
 %build
 # Need to be in a UTF-8 locale so grep (used by the desktop file
