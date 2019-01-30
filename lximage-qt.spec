@@ -2,8 +2,8 @@
 
 Summary:	Image viewer and screenshot tool for the LXQt desktop
 Name:		lximage-qt
-Version:	0.7.0
-Release:	2
+Version:	0.14.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org/
@@ -51,8 +51,9 @@ export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 export LC_ALL=en_US.utf-8
 %ninja_install -C build
+%find_lang %{name} --with-qt --all-name
 
-%files
+%files -f %{name}.lang
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/applications/%{name}-screenshot.desktop
