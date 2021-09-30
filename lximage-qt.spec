@@ -1,5 +1,3 @@
-%define debug_package %{nil}
-
 Summary:	Image viewer and screenshot tool for the LXQt desktop
 Name:		lximage-qt
 Version:	0.17.0
