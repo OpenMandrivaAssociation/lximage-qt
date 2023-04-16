@@ -1,7 +1,7 @@
 Summary:	Image viewer and screenshot tool for the LXQt desktop
 Name:		lximage-qt
-Version:	1.2.0
-Release:	4
+Version:	1.3.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org/
@@ -51,9 +51,15 @@ export LC_ALL=en_US.utf-8
 %ninja_install -C build
 %find_lang %{name} --with-qt --all-name
 
+# SVGs are scalable...
+mkdir -p %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
+mv %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/*.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
+rmdir %{buildroot}%{_datadir}/icons/hicolor/48x48/apps
+rmdir %{buildroot}%{_datadir}/icons/hicolor/48x48
+
 %files -f %{name}.lang
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_iconsdir}/hicolor/48x48/apps/%{name}.png
 %{_datadir}/metainfo/lximage-qt.metainfo.xml
+%{_datadir}/icons/*/*/*/*
 %dir %{_datadir}/lximage-qt/translations
