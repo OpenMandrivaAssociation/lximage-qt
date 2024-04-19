@@ -1,24 +1,23 @@
 Summary:	Image viewer and screenshot tool for the LXQt desktop
 Name:		lximage-qt
-Version:	1.4.0
+Version:	2.0.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		http://lxqt.org/
 Source0:	https://github.com/lxqt/lximage-qt/releases/download/%{version}/lximage-qt-%{version}.tar.xz
 BuildRequires:	cmake
-BuildRequires:	qmake5
 BuildRequires:	ninja
-BuildRequires:	cmake(Qt5Widgets)
-BuildRequires:	cmake(Qt5DBus)
-BuildRequires:	cmake(Qt5Network)
-BuildRequires:	cmake(Qt5PrintSupport)
-BuildRequires:	cmake(Qt5X11Extras)
-BuildRequires:	cmake(Qt5LinguistTools)
-BuildRequires:	cmake(Qt5Svg)
-BuildRequires:	cmake(lxqt-build-tools)
+BuildRequires:	cmake(Qt6Widgets)
+BuildRequires:	cmake(Qt6DBus)
+BuildRequires:	cmake(Qt6Network)
+BuildRequires:	cmake(Qt6PrintSupport)
+BuildRequires:	cmake(Qt6LinguistTools)
+BuildRequires:	cmake(Qt6Svg)
+BuildRequires:	cmake(Qt6SvgWidgets)
+BuildRequires:	cmake(lxqt2-build-tools)
 BuildRequires:	pkgconfig(lxqt)
-BuildRequires:	pkgconfig(libfm-qt) >= 0.12.0
+BuildRequires:	pkgconfig(libfm-qt6) >= 0.12.0
 BuildRequires:	pkgconfig(libfm-extra)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libexif)
@@ -32,7 +31,7 @@ Image viewer and screenshot tool for the LXQt desktop.
 %prep
 %setup -q
 %autopatch -p1
-%cmake_qt5 -DPULL_TRANSLATIONS=NO -G Ninja
+%cmake -DPULL_TRANSLATIONS=NO -G Ninja
 
 %build
 # Need to be in a UTF-8 locale so grep (used by the desktop file
