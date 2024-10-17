@@ -4,7 +4,7 @@ Version:	2.0.1
 Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/Other
-Url:		http://lxqt.org/
+Url:		https://lxqt.org/
 Source0:	https://github.com/lxqt/lximage-qt/releases/download/%{version}/lximage-qt-%{version}.tar.xz
 BuildRequires:	cmake
 BuildRequires:	ninja
