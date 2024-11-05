@@ -1,7 +1,7 @@
 Summary:	Image viewer and screenshot tool for the LXQt desktop
 Name:		lximage-qt
-Version:	2.0.1
-Release:	2
+Version:	2.1.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		https://lxqt.org/
