@@ -1,13 +1,13 @@
 Summary:	Image viewer and screenshot tool for the LXQt desktop
 Name:		lximage-qt
 Version:	2.4.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		https://lxqt.org/
 Source0:	https://github.com/lxqt/lximage-qt/releases/download/%{version}/lximage-qt-%{version}.tar.xz
-BuildRequires:	cmake
-BuildRequires:	ninja
+BuildSystem:	cmake
+BuildOption:	-DPULL_TRANSLATIONS=NO
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6DBus)
 BuildRequires:	cmake(Qt6Network)
@@ -28,27 +28,15 @@ BuildRequires:	pkgconfig(libmenu-cache)
 %description
 Image viewer and screenshot tool for the LXQt desktop.
 
-%prep
-%setup -q
-%autopatch -p1
-%build
-%cmake -DPULL_TRANSLATIONS=NO -G Ninja
-# Need to be in a UTF-8 locale so grep (used by the desktop file
-# translation generator) doesn't scream about translations containing
-# "binary" (non-ascii) characters
+%build -p
 export LANG=en_US.utf-8
 export LC_ALL=en_US.utf-8
-%ninja_build
 
-%install
-# Need to be in a UTF-8 locale so grep (used by the desktop file
-# translation generator) doesn't scream about translations containing
-# "binary" (non-ascii) characters
+%install -p
 export LANG=en_US.utf-8
 export LC_ALL=en_US.utf-8
-%ninja_install -C build
-%find_lang %{name} --with-qt --all-name
 
+%install -a
 # SVGs are scalable...
 mkdir -p %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
 mv %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/*.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
